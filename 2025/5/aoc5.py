@@ -1,5 +1,4 @@
 
-
 def parse_file():
     path = "input.txt"
     with open(path) as f:
@@ -23,7 +22,7 @@ def part2():
             return 0
         lb, ub = ranges.pop(0)
         return len(range(lb, ub+1)) + length_of_interval_with_smallest_lower_bound(adjust_ranges(ranges, [lb, ub]))
-    print(length_of_interval_with_smallest_lower_bound(fresh_ranges))
+    print(length_of_interval_with_smallest_lower_bound(fresh_ranges))   
     
 part1()
 part2()
