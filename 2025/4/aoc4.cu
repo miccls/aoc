@@ -44,7 +44,6 @@ std::vector<uint8_t> processData(const std::vector<std::string>& input_grid) {
     std::vector<uint8_t> has_paper_roll(rows * cols);
     for (size_t row = 0; row < rows; ++row) {
         for (size_t col = 0; col < cols; ++col) {
-            // Standard row-major flattening: row * width + col
             has_paper_roll[row * cols + col] =
                 (input_grid[row][col] == paper_roll) ? 1 : 0;
         }
